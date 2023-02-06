@@ -1,0 +1,14 @@
+# julia --project jade/norcal-resolution-jade.jl #simulation_name  #days #horizon #interval24
+
+jade config create jade/jade_jobs_google_compare.txt -c config.json
+
+jade config create jade/jade_jobs_bid_compare.txt -c config.json
+ 
+jade submit-jobs config.json \
+    --resource-monitor-type=aggregation \
+    --resource-monitor-interval=10 \
+    --output=output_bid_1 \
+    --per-node-batch-size=1 \
+    --num-processes=1 \
+    --hpc-config=hpc_config.toml \
+    --force

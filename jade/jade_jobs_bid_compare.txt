@@ -1,0 +1,1 @@
+julia --project jade/bid_model_curtailment_driver.jl

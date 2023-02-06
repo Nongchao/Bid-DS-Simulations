@@ -1,0 +1,7 @@
+hpc_type = "slurm"
+job_prefix = "job"
+
+[hpc]
+account = "smartds"
+partition = "bigmem"
+walltime = "48:00:00"
